@@ -1,4 +1,5 @@
-﻿using NTierArchitecture.Entities.DTOs;
+﻿using EntityFrameworkCorePagination.Nuget.Pagination;
+using NTierArchitecture.Entities.DTOs;
 using NTierArchitecture.Entities.Models;
 using System;
 using System.Collections.Generic;
@@ -15,5 +16,5 @@ public interface IStudentService
     string DeleteById(Guid id);
     List<Student> GetAll();
     bool Any(Expression<Func<Student, bool>> predicate);
-    List<Student> GetAllByClassRoomId(Guid classRoomId);
+    Task<PaginationResult<Student>> GetAllByClassRoomIdAsync(PaginationRequestDto request);
 }

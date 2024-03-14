@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using EntityFrameworkCorePagination.Nuget.Pagination;
 using FluentValidation;
 using FluentValidation.Results;
 using NTierArchitecture.Business.Constants;
@@ -32,7 +33,7 @@ public sealed class StudentManager(IStudentRepository studentRepository,
 
         if(isIdentityNumberExists)
         {
-            return MessageConstants.NameAlreadyExists;
+            throw new ArgumentException(MessageConstants.IdentityNumberAlreadyExists);
         }
 
         int studentNumber = studentRepository.GetNewStudentNumber();
@@ -68,24 +69,35 @@ public sealed class StudentManager(IStudentRepository studentRepository,
     public List<Student> GetAll()
     {
         List<Student> students = 
-            studentRepository.GetAll()
-            .Where(p=>!p.IsDeleted)
-            .OrderBy(p=>p.ClassRoomId)
-            .ThenBy(p=>p.FirstName + " "+ p.LastName)
-            .ToList();
+                                studentRepository.GetAll()
+                                .Where(p=>!p.IsDeleted)
+                                .OrderBy(p=>p.ClassRoomId)
+                                .ThenBy(p=>p.FirstName + " "+ p.LastName)
+                                .ToList();
+
+        return students;
+    }
+
+    public async Task<PaginationResult<Student>> GetAllByClassRoomIdAsync(PaginationRequestDto request)
+    {
+        PaginationResult<Student> students =
+                                await studentRepository.GetAll()
+                                .Where(p => p.ClassRoomId == request.Id)
+                                .Where(search=> 
+                                search.FirstName.ToLower().Contains(request.Search.ToString().ToLower()) ||
+                                 search.LastName.ToLower().Contains(request.Search.ToString().ToLower()) ||
+                                  search.IdentityNumber.Contains(request.Search.ToString()))
+                                .OrderBy(p => p.FirstName)
+                                .ToPagedListAsync(request.PageNumber,request.PageSize);
+                                //.Skip((request.PageNumber-1) * request.PageSize)
+                                //.Take(request.PageSize)
 
         return students;
     }
 
     public List<Student> GetAllByClassRoomId(Guid classRoomId)
     {
-        List<Student> students =
-           studentRepository.GetAll()
-           .Where(p => p.ClassRoomId == classRoomId)
-           .OrderBy(p => p.FirstName)
-           .ToList();
-
-        return students;
+        throw new NotImplementedException();
     }
 
     public string Update(UpdateStudentDto request)
