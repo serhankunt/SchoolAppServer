@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34322.80
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NTierArchitecture.WebAPI", "NTierArchitecture.WebAPI\NTierArchitecture.WebAPI.csproj", "{0D1976F8-BA2D-42FB-8B87-679ED47B3281}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NTierArchitectureSchool.WebAPI", "NTierArchitecture.WebAPI\NTierArchitectureSchool.WebAPI.csproj", "{0D1976F8-BA2D-42FB-8B87-679ED47B3281}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NTierArchitecture.Entities", "NTierArchitecture.Entities\NTierArchitecture.Entities.csproj", "{DF80EF0E-59AD-4863-8BB1-5AAFDF82A022}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NTierArchitectureSchool.Entities", "NTierArchitecture.Entities\NTierArchitectureSchool.Entities.csproj", "{DF80EF0E-59AD-4863-8BB1-5AAFDF82A022}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NTierArchitecture.DataAccess", "NTierArchitecture.DataAccess\NTierArchitecture.DataAccess.csproj", "{D8D00920-56B1-4EA2-9F27-36ABF6A8DDAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NTierArchitectureSchool.DataAccess", "NTierArchitecture.DataAccess\NTierArchitectureSchool.DataAccess.csproj", "{D8D00920-56B1-4EA2-9F27-36ABF6A8DDAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NTierArchitecture.Business", "NTierArchitecture.Business\NTierArchitecture.Business.csproj", "{17E9FDB2-13AA-4920-BB78-A382DEA50AF7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NTierArchitectureSchool.Business", "NTierArchitecture.Business\NTierArchitectureSchool.Business.csproj", "{17E9FDB2-13AA-4920-BB78-A382DEA50AF7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

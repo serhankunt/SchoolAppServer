@@ -18,8 +18,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NTierArchitecture.DataAccess\NTierArchitecture.DataAccess.csproj" />
-    <ProjectReference Include="..\NTierArchitecture.Entities\NTierArchitecture.Entities.csproj" />
+    <ProjectReference Include="..\NTierArchitecture.DataAccess\NTierArchitectureSchool.DataAccess.csproj" />
+    <ProjectReference Include="..\NTierArchitecture.Entities\NTierArchitectureSchool.Entities.csproj" />
   </ItemGroup>
 
 </Project>

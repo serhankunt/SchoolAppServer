@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NTierArchitecture.Entities\NTierArchitecture.Entities.csproj" />
+    <ProjectReference Include="..\NTierArchitecture.Entities\NTierArchitectureSchool.Entities.csproj" />
   </ItemGroup>
 
 </Project>
