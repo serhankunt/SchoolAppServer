@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NTierArchitectureSchool.Dat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NTierArchitectureSchool.Business", "NTierArchitecture.Business\NTierArchitectureSchool.Business.csproj", "{17E9FDB2-13AA-4920-BB78-A382DEA50AF7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NTierArchitectureSchool.UI", "NTierArchitectureSchool.UI\NTierArchitectureSchool.UI.csproj", "{D6C603D0-6E39-4E81-919C-C60E1B3D5EBC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{17E9FDB2-13AA-4920-BB78-A382DEA50AF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17E9FDB2-13AA-4920-BB78-A382DEA50AF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17E9FDB2-13AA-4920-BB78-A382DEA50AF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6C603D0-6E39-4E81-919C-C60E1B3D5EBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6C603D0-6E39-4E81-919C-C60E1B3D5EBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6C603D0-6E39-4E81-919C-C60E1B3D5EBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6C603D0-6E39-4E81-919C-C60E1B3D5EBC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
